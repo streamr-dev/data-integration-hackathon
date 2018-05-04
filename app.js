@@ -1,6 +1,5 @@
 const StreamrClient = require('streamr-client');
 
-
 // Ahoy Hacker, fill in these!
 const STREAM_NAME = 'INSERT_STREAM_NAME_HERE';
 const API_KEY = 'INSERT_USER_API_KEY_HERE';
@@ -8,7 +7,6 @@ const API_KEY = 'INSERT_USER_API_KEY_HERE';
 main().catch(console.error);
 
 async function main() {
-
     // Initialize Streamr client
     const client = new StreamrClient({
         apiKey: API_KEY
@@ -21,7 +19,7 @@ async function main() {
     console.info("Initialized stream:", stream.id);
 
     // Generate and produce randomized data
-    await generateEventAndSend(stream ,0);
+    await generateEventAndSend(stream, 0);
 }
 
 async function generateEventAndSend(stream, i) {
@@ -42,7 +40,7 @@ async function generateEventAndSend(stream, i) {
 }
 
 function randomAlphanumericString(len) {
-    charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let randomString = '';
     for (let i = 0; i < len; i++) {
         let randomPoz = Math.floor(Math.random() * charSet.length);
