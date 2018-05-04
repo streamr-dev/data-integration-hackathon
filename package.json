@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/streamr-dev/data-integration-hackathon/issues"
   },
-  "homepage": "https://github.com/streamr-dev/data-integration-hackathon#readme"
+  "homepage": "https://github.com/streamr-dev/data-integration-hackathon#readme",
+  "dependencies": {
+    "streamr-client": "^0.10.2"
+  }
 }
