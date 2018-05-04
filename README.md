@@ -4,13 +4,14 @@
 
 1. [Login](https://www.streamr.com/login/auth) or [register](https://www.streamr.com/register/signup) to Streamr
 2. Grab your user API key from [here](https://www.streamr.com/profile/edit)
-3. `git clone git@github.com:streamr-dev/data-integration-hackathon.git`
-4. `npm install`
-5. Open *app.js* in your IDE/editor of choice
-6. Edit constants `STREAM_NAME` (use your imagination) and `API_KEY` (use your API key grabbed above)
-7. `npm start`
-8. If everything works, you should see `Event sent: {...}` style logging in standard output.
-9. Go to [Streams list page](https://www.streamr.com/stream/list), find your newly created Stream, and ensure data is
+3. Export the API key with `export API_KEY=<YOUR_API_KEY_FROM_ABOVE>`
+4. `git clone git@github.com:streamr-dev/data-integration-hackathon.git`
+5. `npm install`
+6. Open *app.js* in your IDE/editor of choice
+7. Edit constant `STREAM_NAME` (use your imagination, stream does not have to exist yet)
+8. `npm start`
+9. If everything works, you should see `Event sent: {...}` style logging in standard output.
+10. Go to [Streams list page](https://www.streamr.com/stream/list), find your newly created Stream, and ensure data is
 flowing in by looking at the Recent Events tab, e.g.,
 
 ![Recent events](images/recent-events.png)
@@ -31,7 +32,6 @@ flowing in by looking at the Recent Events tab, e.g.,
 - [Streamr API Swagger](https://www.streamr.com/help/api)
 
 ### Troubleshooting errors
-
 
 **API key is wrong:**
 ```

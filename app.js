@@ -2,7 +2,10 @@ const StreamrClient = require('streamr-client');
 
 // Ahoy Hacker, fill in these!
 const STREAM_NAME = 'INSERT_STREAM_NAME_HERE';
-const API_KEY = 'INSERT_USER_API_KEY_HERE';
+const API_KEY = process.env.API_KEY
+if (API_KEY === undefined) {
+  throw new Error('Must export environment variable API_KEY');
+}
 
 main().catch(console.error);
 
