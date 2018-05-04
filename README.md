@@ -1,5 +1,8 @@
 # data-integration-hackathon
 
+Included is an example script *app.js* that sends random data to a Streamr stream. Also included is *package.json*
+for dependency management and devops infastructure code (e.g. *Dockerfile*).
+
 ## Start here
 
 1. [Login](https://www.streamr.com/login/auth) or [register](https://www.streamr.com/register/signup) to Streamr
@@ -23,7 +26,7 @@ flowing in by looking at the Recent Events tab, e.g.,
 - Customize your `package.json`
 - Make sure `npm start` runs your script
 - Make sure all dependencies are present in `package.json`
-- Make sure you have configured the fields of your streams.
+- Make sure you have configured the fields of your streams in Streamr.com.
 - Pushing to EC2 with Mikhael
 
 ## Help
