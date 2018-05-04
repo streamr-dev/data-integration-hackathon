@@ -24,7 +24,14 @@ flowing in by looking at the Recent Events tab, e.g.,
 
 ![Recent events](images/recent-events.png)
 
-**You are ready to hack!**
+
+### 4. Change remote origin
+1. Create a new repository on GitHub (do not initialize with README!)
+2. `git remote set-url origin <REPOSITORY_URL>`
+3. `git push`
+
+
+### 5. You are ready to hack!
 
 
 ## TODO: End here
