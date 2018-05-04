@@ -60,7 +60,8 @@ travis init
  travis encrypt DOCKER_PASS="<docker password>" --add -r <git_owner/git_repo>
 ```
 4 . Commit changes to repo
-5 . Activate Travis Builds
+
+5 . Activate Travis Builds at https://travis-ci.com/profile/<github username> 
 
 ## Help
 
