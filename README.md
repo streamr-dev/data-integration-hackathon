@@ -50,6 +50,7 @@ Dependencies:
 ```
 sudo gem install travis
 ```
+- Note: If it is your first run extra steps will follow to login with github credentials (Call Mikhael in case of doubt) and you will need to execute the previouse step again.
 
 1 . Update travis_scripts/docker-build.sh
 ```
