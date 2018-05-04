@@ -45,6 +45,12 @@ flowing in by looking at the Recent Events tab, e.g.,
 
 
 ## Deployment
+Dependencies:
+- Install travis cli
+```
+sudo gem install travis
+```
+
 1 . Update travis_scripts/docker-build.sh
 ```
  export OWNER=<your docker name>
