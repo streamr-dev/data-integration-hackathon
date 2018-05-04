@@ -7,18 +7,18 @@ const API_KEY = 'INSERT_USER_API_KEY_HERE';
 main().catch(console.error);
 
 async function main() {
-    // Initialize Streamr client
+    // Initialize Streamr-Client library
     const client = new StreamrClient({
         apiKey: API_KEY
     });
 
-    // Get a Stream (creates one 1st time)
+    // Get a Stream (creates one if does not already exist)
     const stream = await client.getOrCreateStream({
         name: STREAM_NAME
     });
     console.info("Initialized stream:", stream.id);
 
-    // Generate and produce randomized data
+    // Generate and produce randomized data to Stream
     await generateEventAndSend(stream, 0);
 }
 
