@@ -1,0 +1,19 @@
+{
+  "name": "data-integration-hackathon",
+  "version": "1.0.0",
+  "description": "Fork this repo to get started with the Hackathon",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/streamr-dev/data-integration-hackathon.git"
+  },
+  "author": "Streamr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/streamr-dev/data-integration-hackathon/issues"
+  },
+  "homepage": "https://github.com/streamr-dev/data-integration-hackathon#readme"
+}
