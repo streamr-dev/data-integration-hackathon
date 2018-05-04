@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '8'
+sudo: required
+services:
+- docker
+branches:
+  only:
+  - master
+jobs:
+  include:
+  - stage: Build docker
+    script: "./travis_scripts/docker-build.sh"
+    if: branch = master
