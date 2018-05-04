@@ -34,12 +34,12 @@ flowing in by looking at the Recent Events tab, e.g.,
 ### 5. You are ready to hack!
 
 
-## TODO: End here
-- Customize your `package.json`
+## End here
+- Customize `package.json` if needed
 - Make sure `npm start` runs your script
-- Make sure all dependencies are present in `package.json`
-- Make sure you have configured the fields of your streams in Streamr.com.
-- Pushing to EC2 with Mikhael
+- Make sure all dependencies are present in `package.json` (You can test this by removing *node_modules*, doing `npm install` and then making sure `npm start` starts without errors)
+- Make sure you have configured the fields of your streams in Streamr.com (use autodetect for convenience).
+- Push to EC2 with Mikhael
 
 ## Help
 
