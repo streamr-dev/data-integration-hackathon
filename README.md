@@ -20,6 +20,7 @@ flowing in by looking at the Recent Events tab, e.g.,
 
 
 ## TODO: End here
+- Customize your `package.json`
 - Make sure `npm start` runs your script
 - Make sure all dependencies are present in `package.json`
 - Make sure you have configured the fields of your streams.
