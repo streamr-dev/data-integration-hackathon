@@ -42,7 +42,25 @@ flowing in by looking at the Recent Events tab, e.g.,
 - Make sure `npm start` runs your script
 - Make sure all dependencies are present in `package.json` (You can test this by removing *node_modules*, doing `npm install` and then making sure `npm start` starts without errors)
 - Make sure you have configured the fields of your streams in Streamr.com (use autodetect for convenience).
-- Push to EC2 with Mikhael
+
+
+## Deployment
+1 . Update travis_scripts/docker-build.sh
+```
+ export OWNER=<your docker name>
+ export IMAGE_NAME=<the name of the image>
+```
+2 . Run the following command
+```
+travis init
+```
+3 . Add encrypted docker credentials to .travis.yaml
+```
+ travis encrypt DOCKER_USER="<docker user>" --add -r <git_owner/git_repo>
+ travis encrypt DOCKER_PASS="<docker password>" --add -r <git_owner/git_repo>
+```
+4 . Commit changes to repo
+5 . Activate Travis Builds
 
 ## Help
 
