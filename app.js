@@ -23,24 +23,29 @@ async function main() {
     console.info("Initialized stream:", stream.id);
 
     // Generate and produce randomized data to Stream
-    await generateEventAndSend(stream, 0);
+    for (let i = 0;; i++) {
+
+        const msg = {
+            messageNo: i,
+            someString: randomAlphanumericString(256),
+            temperature: Math.random() * 100 - 50,
+            hypeLevel: Math.random() * 100 - 50,
+            moonLevel: Math.random() * 100000 - 50,
+            isMoon: Math.random() > 0.5
+        };
+
+        await stream.produce(msg);
+        console.info('Event sent:', msg);
+
+        // Send next package in 3 seconds
+        await timeout(3 * 1000);
+    }
 }
 
-async function generateEventAndSend(stream, i) {
-    const msg = {
-        messageNo: i,
-        someString: randomAlphanumericString(256),
-        temperature: Math.random() * 100 - 50,
-        hypeLevel: Math.random() * 100 - 50,
-        moonLevel: Math.random() * 100000 - 50,
-        isMoon: Math.random() > 0.5
-    };
-
-    await stream.produce(msg);
-    console.info('Event sent:', msg);
-
-    // Send next package in 3 seconds
-    setTimeout(generateEventAndSend.bind(null, stream, i + 1), 3 * 1000);
+function timeout(delay) {
+    return new Promise(done => {
+        setTimeout(done, delay);
+    });
 }
 
 function randomAlphanumericString(len) {
