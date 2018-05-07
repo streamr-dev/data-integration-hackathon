@@ -45,30 +45,28 @@ flowing in by looking at the Recent Events tab, e.g.,
 
 
 ## Deployment
-Dependencies:
-- Install travis cli
-```
-sudo gem install travis
-```
-- Note: If it is your first run extra steps will follow to login with github credentials (Call Mikhael in case of doubt) and you will need to execute the previouse step again.
-
+Deployment requires only pushing into a docker registry
 1 . Update travis_scripts/docker-build.sh
 ```
  export OWNER=<your docker name>
  export IMAGE_NAME=<the name of the image>
 ```
-2 . Run the following command
-```
-travis init
-```
-3 . Add encrypted docker credentials to .travis.yaml
-```
- travis encrypt DOCKER_USER="<docker user>" --add -r <git_owner/git_repo>
- travis encrypt DOCKER_PASS="<docker password>" --add -r <git_owner/git_repo>
-```
-4 . Commit changes to repo
 
-5 . Activate Travis Builds at https://travis-ci.com/profile/<github username> 
+2 . Set up docker credentials
+```
+ export DOCKER_USER=<your docker name>
+ export DOCKER_PASS=<docker password>
+```
+3 . Push to registry
+```
+./travis_scripts/docker_build.sh
+```
+
+4 . Send an email to mikhael.santos@streamr.com with:
+* Docker owner/image_name
+* Streamr Api key
+* Stream Name
+
 
 ## Help
 
